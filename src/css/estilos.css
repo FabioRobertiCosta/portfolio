@@ -1,6 +1,6 @@
-body{
+body {
     background-image: url(../imagens/fundo-site.jpg);
-   background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     font-family: 'VT323', monospace;
@@ -24,7 +24,7 @@ body{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: hidden; /* Garante que o card como um todo não tenha scroll, a menos que o conteúdo interno seja maior */
 }
 
 .cartao .minhas-informacoes {
@@ -38,8 +38,9 @@ body{
 .cartao .minhas-informacoes img {
     border-radius: 50%;
     border: 4px solid #02d08f;
-    width: 100px;
-    height: 100px;
+    /* Aumenta o tamanho da imagem de perfil */
+    width: 120px; /* Era 100px */
+    height: 120px; /* Era 100px */
 }
 
 .cartao .minhas-informacoes .nome {
@@ -90,6 +91,8 @@ body{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    /* Adicionado overflow-y: auto para garantir que a barra de rolagem apareça na seção informacoes-abas se o conteúdo transbordar */
+    overflow-y: auto;
 }
 
 .informacoes-abas .informacao {
@@ -98,6 +101,7 @@ body{
     padding: 15px;
     display: none;
     box-sizing: border-box;
+    /* Removi overflow-y: auto daqui, pois agora está no .informacoes-abas */
 }
 
 .informacoes-abas .informacao.selecionado {
@@ -113,7 +117,8 @@ body{
 
 .informacoes-abas .descricao {
     font-size: 20px;
-    overflow-y: auto;
+    /* Removi overflow-y: auto daqui para que o scrollbar seja gerenciado pelo pai (.informacoes-abas) */
+    /* Garante que o texto quebre para se ajustar ao container */
     word-wrap: break-word;
     flex-grow: 1;
     padding-right: 10px;
@@ -128,7 +133,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    overflow-y: auto;
+    /* overflow-y: auto já está aqui e é o correto para esta lista */
     flex-grow: 1;
     padding: 15px;
 }
@@ -159,8 +164,3 @@ body{
 .redes-sociais .github {
     background-color: #545454;
 }
-
-
-
-
-
