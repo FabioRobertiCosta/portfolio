@@ -91,6 +91,9 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    /* Adiciona padding na parte inferior do contêiner de informações */
+    padding-bottom: 20px;
 }
 
 .informacoes-abas .informacao {
@@ -118,10 +121,6 @@ body {
     word-wrap: break-word;
     flex-grow: 1;
     padding-right: 10px;
-    /* Adiciona um padding na parte de baixo para evitar que o texto fique grudado na borda */
-    padding-bottom: 15px;
-    max-height: 300px;
-    overflow-y: auto;
 }
 
 .redes-sociais {
