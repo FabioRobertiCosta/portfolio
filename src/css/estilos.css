@@ -16,7 +16,7 @@ body {
 
 .cartao {
     background-color: #070d12;
-    /* Ajustes para o Quadro Vermelho: Aumenta a altura e reduz a largura */
+    /* Ajustes para o Quadro Vermelho */
     width: 70%;
     max-width: 500px;
     height: 90%;
@@ -33,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Ajustes para o Quadro Amarelo: Diminui a margem entre os itens */
+    /* Ajustes para o Quadro Amarelo: Diminui a margem */
     gap: 5px;
 }
 
@@ -53,7 +53,7 @@ body {
     /* Ajustes para o Quadro Amarelo: Diminui a fonte */
     font-size: 20px;
     color: #b8bbc5;
-    /* Ajusta o espaçamento vertical entre as linhas */
+    /* Ajusta o espaçamento entre as linhas */
     line-height: 1.2;
 }
 
@@ -95,7 +95,7 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    /* Ajustes para o Quadro Azul: Garante a barra de rolagem na área de conteúdo */
+    /* Ajustes para o Quadro Azul: Garante a barra de rolagem */
     overflow-y: auto;
 }
 
@@ -165,3 +165,4 @@ body {
 .redes-sociais .github {
     background-color: #545454;
 }
+
