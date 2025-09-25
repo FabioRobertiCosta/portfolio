@@ -16,10 +16,8 @@ body {
 
 .cartao {
     background-color: #070d12;
-    /* Reduz a largura para deixar o card mais fino */
     width: 65%;
     max-width: 450px;
-    /* Aumenta a altura para dar mais espaço ao conteúdo */
     height: 95%;
     max-height: 850px;
     border: 2px solid #e126d9;
@@ -93,8 +91,6 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    /* Garante a barra de rolagem para o conteúdo da aba */
-    overflow-y: auto;
 }
 
 .informacoes-abas .informacao {
@@ -122,10 +118,9 @@ body {
     word-wrap: break-word;
     flex-grow: 1;
     padding-right: 10px;
-}
-
-.informacoes-abas .descricao span {
-    color: #02d08f;
+    /* Adicionando uma altura máxima para forçar o scroll */
+    max-height: 300px; /* Você pode ajustar esse valor */
+    overflow-y: auto;
 }
 
 .redes-sociais {
@@ -163,3 +158,8 @@ body {
 .redes-sociais .github {
     background-color: #545454;
 }
+
+.redes-sociais .github {
+    background-color: #545454;
+}
+
