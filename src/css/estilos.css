@@ -118,8 +118,9 @@ body {
     word-wrap: break-word;
     flex-grow: 1;
     padding-right: 10px;
-    /* Adicionando uma altura máxima para forçar o scroll */
-    max-height: 300px; /* Você pode ajustar esse valor */
+    /* Adiciona um padding na parte de baixo para evitar que o texto fique grudado na borda */
+    padding-bottom: 15px;
+    max-height: 300px;
     overflow-y: auto;
 }
 
@@ -158,8 +159,3 @@ body {
 .redes-sociais .github {
     background-color: #545454;
 }
-
-.redes-sociais .github {
-    background-color: #545454;
-}
-
