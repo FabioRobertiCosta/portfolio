@@ -16,11 +16,11 @@ body {
 
 .cartao {
     background-color: #070d12;
-    /* AJUSTES PARA FICAR MAIS ALTO, FINO E 1CM MAIS BAIXO */
-    width: 60%; /* Mais fino */
-    max-width: 400px; /* Limite máximo mais estreito */
-    height: 98%; /* Mais alto, subindo o card 1cm */
-    max-height: 880px; /* Limite máximo mais alto */
+    /* Ajustes de Tamanho */
+    width: 65%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 850px;
     border: 2px solid #e126d9;
     border-radius: 10px;
     display: flex;
@@ -91,22 +91,19 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    /* Adicionando um padding inferior para o contêiner geral */
-    padding-bottom: 20px;
-    overflow: hidden;
+    /* AJUSTE: O padding inferior foi movido para o elemento interno para melhor controle */
 }
 
 .informacoes-abas .informacao {
-    min-height: 0;
+    /* É importante que este contêiner tenha uma altura definida pelo Flexbox */
+    min-height: 0; 
     flex-grow: 1;
-    /* Removido padding para evitar sobreposição */
-    padding: 0; 
+    padding: 15px;
     display: none;
     box-sizing: border-box;
+    /* Usa Flexbox para dividir o espaço entre título e descrição */
     display: flex;
     flex-direction: column;
-    /* Essencial para que os filhos (título e descrição) se ajustem */
 }
 
 .informacoes-abas .informacao.selecionado {
@@ -124,19 +121,16 @@ body {
     font-size: 20px;
     word-wrap: break-word;
     
-    /* SOLUÇÃO DEFINITIVA PARA TEXTO E ROLAGEM */
-    flex-grow: 1; 
-    min-height: 0; 
+    /* SOLUÇÃO PARA O TEXTO CABER E ROLAR */
+    flex-grow: 1;
+    /* Garante que ocupe todo o espaço restante e force o scroll */
     max-height: 100%; 
     overflow-y: auto; 
 
     /* Borda e espaçamento interno */
-    border: 2px solid lightblue; 
-    padding: 15px; 
-    padding-right: 20px; /* Para a barra de rolagem não tocar o texto */
-    
-    /* SOLUÇÃO PARA EVITAR SOBREPOSIÇÃO: Adicionar uma margem inferior para dar espaço */
-    margin-bottom: 20px; 
+    border: 2px solid lightblue; /* Nova borda solicitada */
+    padding: 15px; /* Adiciona padding interno */
+    margin-bottom: 20px; /* Espaço após a caixa de texto */
 }
 
 .informacoes-abas .descricao span {
