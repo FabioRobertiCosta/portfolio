@@ -16,11 +16,11 @@ body {
 
 .cartao {
     background-color: #070d12;
-    /* Ajustes de Tamanho do Card (Quadro Vermelho) */
-    width: 65%;
-    max-width: 450px;
-    height: 95%; /* Altura do card */
-    max-height: 850px; /* Altura máxima do card */
+    /* AJUSTES PARA FICAR MAIS ALTO, FINO E 1CM MAIS BAIXO */
+    width: 60%; /* Mais fino */
+    max-width: 400px; /* Limite máximo mais estreito */
+    height: 98%; /* Mais alto, subindo o card 1cm */
+    max-height: 880px; /* Limite máximo mais alto */
     border: 2px solid #e126d9;
     border-radius: 10px;
     display: flex;
@@ -91,20 +91,22 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    /* Adiciona padding aqui para o espaço geral dentro do fundo cinza */
-    padding: 15px; /* Adicionado para criar espaço nas laterais e no topo/fundo geral */
-    overflow: hidden; /* Garante que o conteúdo que passar seja escondido se não houver scroll no elemento filho */
+    padding: 15px;
+    /* Adicionando um padding inferior para o contêiner geral */
+    padding-bottom: 20px;
+    overflow: hidden;
 }
 
 .informacoes-abas .informacao {
-    min-height: 0; 
+    min-height: 0;
     flex-grow: 1;
-    /* Padding interno da aba será tratado pelo padding da descrição */
+    /* Removido padding para evitar sobreposição */
     padding: 0; 
     display: none;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    /* Essencial para que os filhos (título e descrição) se ajustem */
 }
 
 .informacoes-abas .informacao.selecionado {
@@ -115,26 +117,26 @@ body {
     font-size: 20px;
     margin-bottom: 20px;
     text-align: center;
-    flex-shrink: 0; /* Previne que o título encolha */
+    flex-shrink: 0;
 }
 
 .informacoes-abas .descricao {
     font-size: 20px;
     word-wrap: break-word;
     
-    flex-grow: 1; /* Permite que ocupe o espaço restante */
-    min-height: 0; /* Essencial para elementos flexíveis com overflow */
-    max-height: 100%; /* Garante que não exceda o pai */
-    
+    /* SOLUÇÃO DEFINITIVA PARA TEXTO E ROLAGEM */
+    flex-grow: 1; 
+    min-height: 0; 
+    max-height: 100%; 
+    overflow-y: auto; 
+
     /* Borda e espaçamento interno */
     border: 2px solid lightblue; 
-    padding: 15px; /* Adiciona padding interno ao texto */
-    margin-bottom: 0; /* Removido para controle mais preciso com o padding do .informacoes-abas */
-
-    /* Garante a barra de rolagem */
-    overflow-y: auto; 
-    /* Adicione padding-right para evitar que a barra de rolagem toque o texto */
-    padding-right: 20px; 
+    padding: 15px; 
+    padding-right: 20px; /* Para a barra de rolagem não tocar o texto */
+    
+    /* SOLUÇÃO PARA EVITAR SOBREPOSIÇÃO: Adicionar uma margem inferior para dar espaço */
+    margin-bottom: 20px; 
 }
 
 .informacoes-abas .descricao span {
