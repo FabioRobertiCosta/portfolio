@@ -16,11 +16,11 @@ body {
 
 .cartao {
     background-color: #070d12;
-    /* Tamanho do Card Mais Alto e Fino */
+    /* Ajustes de Tamanho do Card (Quadro Vermelho) */
     width: 65%;
     max-width: 450px;
-    height: 95%;
-    max-height: 850px;
+    height: 95%; /* Altura do card */
+    max-height: 850px; /* Altura máxima do card */
     border: 2px solid #e126d9;
     border-radius: 10px;
     display: flex;
@@ -91,15 +91,15 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    /* Removido o padding bottom para que o padding da .descricao controle o espaçamento final */
-    padding: 15px; /* Padding para os lados e topo */
-    padding-bottom: 0; /* O espaçamento de baixo será controlado pela .descricao */
-    overflow: hidden; 
+    /* Adiciona padding aqui para o espaço geral dentro do fundo cinza */
+    padding: 15px; /* Adicionado para criar espaço nas laterais e no topo/fundo geral */
+    overflow: hidden; /* Garante que o conteúdo que passar seja escondido se não houver scroll no elemento filho */
 }
 
 .informacoes-abas .informacao {
     min-height: 0; 
     flex-grow: 1;
+    /* Padding interno da aba será tratado pelo padding da descrição */
     padding: 0; 
     display: none;
     box-sizing: border-box;
@@ -115,26 +115,25 @@ body {
     font-size: 20px;
     margin-bottom: 20px;
     text-align: center;
-    flex-shrink: 0; 
+    flex-shrink: 0; /* Previne que o título encolha */
 }
 
 .informacoes-abas .descricao {
     font-size: 20px;
     word-wrap: break-word;
     
-    /* SOLUÇÃO PARA ENCAIXE E ROLAGEM */
-    flex-grow: 1; 
-    min-height: 0; /* Fundamental para que o flex-grow e overflow funcionem juntos */
-    max-height: 100%; 
-    overflow-y: auto; 
-
-    /* Borda e espaçamento */
-    border: 2px solid lightblue; 
-    padding: 15px; 
-    /* Adiciona margem na parte de baixo para garantir que a borda azul e o scroll não fiquem grudados */
-    margin-bottom: 15px; 
+    flex-grow: 1; /* Permite que ocupe o espaço restante */
+    min-height: 0; /* Essencial para elementos flexíveis com overflow */
+    max-height: 100%; /* Garante que não exceda o pai */
     
-    /* Adiciona padding extra para afastar a barra de rolagem do texto */
+    /* Borda e espaçamento interno */
+    border: 2px solid lightblue; 
+    padding: 15px; /* Adiciona padding interno ao texto */
+    margin-bottom: 0; /* Removido para controle mais preciso com o padding do .informacoes-abas */
+
+    /* Garante a barra de rolagem */
+    overflow-y: auto; 
+    /* Adicione padding-right para evitar que a barra de rolagem toque o texto */
     padding-right: 20px; 
 }
 
