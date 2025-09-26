@@ -13,29 +13,12 @@ body{
  padding: 30px;
 }
 
-<<<<<<< HEAD
-
-
 .cartao{
  background-color: #070d12;
  width: 370px;
  border: 2px solid #e126d9;
  border-radius: 10px;
  overflow: hidden;
-=======
-.cartao {
-    background-color: #070d12;
-    /* Ajustes de Tamanho */
-    width: 65%;
-    max-width: 450px;
-    height: 95%;
-    max-height: 850px;
-    border: 2px solid #e126d9;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
->>>>>>> 950960fdabf994923b0b551cec484311014fce4b
 }
 
 .cartao .minhas-informacoes{
@@ -92,7 +75,6 @@ body{
  background-color: #262626;
 }
 
-<<<<<<< HEAD
 .cartao .abas .aba:hover{
  background-color: #414141;
 }
@@ -101,26 +83,6 @@ body{
  min-height: 260px;
  padding: 15px;
  display: none;
-=======
-.cartao .informacoes-abas {
-    background-color: #262626;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    /* AJUSTE: O padding inferior foi movido para o elemento interno para melhor controle */
-}
-
-.informacoes-abas .informacao {
-    /* É importante que este contêiner tenha uma altura definida pelo Flexbox */
-    min-height: 0; 
-    flex-grow: 1;
-    padding: 15px;
-    display: none;
-    box-sizing: border-box;
-    /* Usa Flexbox para dividir o espaço entre título e descrição */
-    display: flex;
-    flex-direction: column;
->>>>>>> 950960fdabf994923b0b551cec484311014fce4b
 }
 
 .informacoes-abas .informacao.selecionado{
@@ -133,28 +95,11 @@ body{
  text-align: center;
 }
 
-<<<<<<< HEAD
 .informacoes-abas .descricao{
  font-size: 20px;
  max-height: 180px;
  overflow-y: auto;
  padding-right: 10px;
-=======
-.informacoes-abas .descricao {
-    font-size: 20px;
-    word-wrap: break-word;
-    
-    /* SOLUÇÃO PARA O TEXTO CABER E ROLAR */
-    flex-grow: 1;
-    /* Garante que ocupe todo o espaço restante e force o scroll */
-    max-height: 100%; 
-    overflow-y: auto; 
-
-    /* Borda e espaçamento interno */
-    border: 2px solid lightblue; /* Nova borda solicitada */
-    padding: 15px; /* Adiciona padding interno */
-    margin-bottom: 20px; /* Espaço após a caixa de texto */
->>>>>>> 950960fdabf994923b0b551cec484311014fce4b
 }
 
 .informacoes-abas .descricao span{
@@ -196,10 +141,3 @@ body{
 .redes-sociais .github{
  background-color: #545454;
 }
-
-<<<<<<< HEAD
-=======
-.redes-sociais .github {
-    background-color: #545454;
-}
->>>>>>> 950960fdabf994923b0b551cec484311014fce4b
